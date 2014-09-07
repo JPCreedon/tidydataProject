@@ -1,6 +1,6 @@
 #folder relative to the working directory of the script
-folder <- "UCI HAR Dataset"
-
+#folder <- "UCI HAR Dataset"
+folder <- "."
 ##
 ##STEP 1
 ##Merges the training and the test sets to create one data set.
