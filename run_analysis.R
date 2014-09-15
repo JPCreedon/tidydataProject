@@ -1,9 +1,8 @@
-#folder relative to the working directory of the script
-#folder <- "UCI HAR Dataset"
-##
-#Coursera Instructions ask for 
-#the script to run with the currentworking directory
-folder <- "."
+#Coursera Instructions
+#run from current working directory
+#assume UCI HAR Dataset folder is the unzip dataset folder
+#adjust as needed
+folder <- paste(getwd(),"UCI HAR Dataset",sep="/")
 
 ##
 ##STEP 1
