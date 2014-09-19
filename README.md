@@ -24,7 +24,9 @@ Then all required steps have been performed in order
 
 ###### Step 1: Merges the training and the test sets to create one data set
 train/subject_train.txt, train/y_train.txt, train/X_train.txt are read in respective variables which are then cbind to merge columns in the same order
-Same process for test/*_test.txt file
+
+The same process/operations are repeated for test/*_test.txt file
+
 The 2 "cbinded"" variables obtained from train and subject files are then rbind to combine/merge the rows to obtain a merged set
 
 ###### Step 2: Extracts only the measurements on the mean and standard deviation for each measurement. 
@@ -33,6 +35,7 @@ The features.txt file is read and the relevant feature indexes are searched usin
 
 ###### Step 3: Uses descriptive activity names to name the activities in the data set
 The activity_labels.txt is read to get the labels.
+
 The activity column value are then replace with the label obtained form the previous file
 ###### Step 4: Appropriately labels the data set with descriptive variable names
 At step 2, features variable is created with all feature labels and featureColumns variable with the relevant selected columns index, hence the relevant feature labels are directly obtained from those 2 variables and the column directly named
