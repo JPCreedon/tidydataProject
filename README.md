@@ -30,13 +30,13 @@ The same process/operations are repeated for test/*_test.txt file
 The 2 "cbinded"" variables obtained from train and subject files are then rbind to combine/merge the rows to obtain a merged set
 
 ###### Step 2: Extracts only the measurements on the mean and standard deviation for each measurement. 
-The features.txt file is read and the relevant feature indexes are searched using a regular expression. The found indexes of relevant features are used to subset the columns of the merged set from Step 1
+The features.txt file is read and the relevant feature indexes are searched using a regular expression: "-(mean|std)\(\)" . The found indexes of relevant features are used to subset the columns of the merged set from Step 1
 > Note: Angle features in the original dataset, while a difference with a mean and standard deviation, were not considered a mean or a standard deviation to be selected as a variable per coursera instructions since they are a angle(~difference) and not a mean or sd per se.
 
 ###### Step 3: Uses descriptive activity names to name the activities in the data set
 The activity_labels.txt is read to get the labels.
 
-The activity column value are then replace with the label obtained form the previous file
+The activity column value are then replace with the labels obtained form the previous file
 ###### Step 4: Appropriately labels the data set with descriptive variable names
 At step 2, features variable is created with all feature labels and featureColumns variable with the relevant selected columns index, hence the relevant feature labels are directly obtained from those 2 variables and the column directly named
 '''r
