@@ -45,7 +45,7 @@ The activity column values are then replaced with the labels obtained form the p
 
 ###### Step 4: Appropriately labels the data set with descriptive variable names
 
-At step 2, a "features" variable has been created to hold all feature labels and a "featureColumns" variable with the relevant selected columns index, hence the relevant feature labels are directly obtained from those 2 variables and the column are directly named with descriptive label:
+At step 2, a "features" dataframe variable has been created to hold all feature labels and a "featureColumns" vector variable with the relevant selected columns index, hence the relevant feature labels are directly obtained from those 2 variables and the column are directly named with descriptive label:
 '''r
 colnames(sets) <- c("subject","activity",features[featuresColumns,2])
 '''
