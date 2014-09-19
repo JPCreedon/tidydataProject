@@ -33,7 +33,7 @@ All data are unitless since features have been normalized in the original raw da
 
 | Variable | Details
 | -------- |---------
-|"subject" | The id of the test subject as a factor 
+|"subject" | The id of the test subject as a factor ("1"-"30")
 |"activity" | The activity label performed as a factor (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) 
 |"tBodyAcc-mean()-X" | The mean of this feature range [-1,1]
 |"tBodyAcc-mean()-Y" | The mean of this feature range [-1,1]
