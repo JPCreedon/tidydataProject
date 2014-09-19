@@ -29,13 +29,12 @@ All data are unitless since features have been normalized in the original raw da
 
 > Note: Angle features in the original dataset, while a difference with a mean and standard deviation, were not considered a mean or a standard deviation to be selected as a variable per coursera instructions since they are a angle(~difference) and not a mean or sd per se.
 
-*Dimensions: 180 rows (6 subjects * 30 activities) with 68 variables (66 selected mean and sd features, plus subject and activity variables)
+* Dimensions: 180 rows (6 subjects * 30 activities) with 68 variables (66 selected mean and sd features, plus subject and activity variables)
 
 | Variable | Details
 | -------- |---------
 |"subject" | The id of the test subject as a factor 
-|"activity" | The activity label performed as a factor
-(WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) 
+|"activity" | The activity label performed as a factor (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) 
 |"tBodyAcc-mean()-X" | Normalized range [-1,1] 
 |"tBodyAcc-mean()-Y" | Normalized range [-1,1] 
 |"tBodyAcc-mean()-Z" | Normalized range [-1,1] 
