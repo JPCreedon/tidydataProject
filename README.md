@@ -41,15 +41,15 @@ The found indexes of relevant features are used to subset the columns of the mer
 
 The activity_labels.txt is read to get the labels.
 
-The activity column value are then replace with the labels obtained form the previous file
+The activity column values are then replaced with the labels obtained form the previous file
 
 ###### Step 4: Appropriately labels the data set with descriptive variable names
 
-At step 2, features variable is created with all feature labels and featureColumns variable with the relevant selected columns index, hence the relevant feature labels are directly obtained from those 2 variables and the column directly named
+At step 2, a "features" variable has been created to hold all feature labels and a "featureColumns" variable with the relevant selected columns index, hence the relevant feature labels are directly obtained from those 2 variables and the column are directly named with descriptive label:
 '''r
 colnames(sets) <- c("subject","activity",features[featuresColumns,2])
 '''
-> Why is it descriptive ? The same label of the feature as found in the 'features.txt' file of original dataset ,is deem descriptive with the belief/hope to make it easier to cross reference the original dataset and specificaly the 'features_info.txt' file that describe the original feature selection
+> Why is it descriptive to use the feature label as-is? The same label of the feature as found in the 'features.txt' file of original dataset ,is deem to be descriptive with the belief/hope to make it easier to cross reference the original dataset and specificaly the 'features_info.txt' file that describe the original feature selection
 
 ###### Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 
