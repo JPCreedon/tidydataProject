@@ -109,6 +109,9 @@ tidyset <- summarise_each(tidyset,"mean")
 #enjoy
 write.table(tidyset,"tidyset.txt",row.names =FALSE)
 
+#output the tidyset
+tidyset
+
 ##
 ##THE END
 ## That's all folks
