@@ -16,12 +16,18 @@ While The run_analysis.R has been commented, hereby is a description of it as re
 The UCI HAR Dataset is considered to be in the current working directory (per coursera instructions) in the UCI HAR Dataset (as the default unzip folder). Then all required steps have been performed in order
 
 * Step 1: Merges the training and the test sets to create one data set
-  *step 1
+  **step 1
 * Step 2: Extracts only the measurements on the mean and standard deviation for each measurement. 
-  *step 2
+  **step 2
 * Step 3: Uses descriptive activity names to name the activities in the data set
-  *step 3
+  **step 3
 * Step 4: Appropriately labels the data set with descriptive variable names
-  *step 4
+  **step 4
 * Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
-  *step 5
+  **step 5
+
+As suggested by David Hood, Community TA for the course, in the following [thread](https://class.coursera.org/getdata-007/forum/thread?thread_id=49): you can use the following R code to load and view the tidyset.txt file produced by the script:
+```r
+data <- read.table('tidyset.txt', header = TRUE)
+View(data)
+```
