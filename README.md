@@ -80,4 +80,4 @@ As suggested by David Hood, Community TA for the course, in the following [threa
 data <- read.table('tidyset.txt', header = TRUE)
 View(data)
 ```
-Refer to the [Codebook](https://github.com/idogit/tidydataProject/blob/master/CodeBook.md) about the produced tidy data set int eh tidyset.txt file
+Refer to the [Codebook](https://github.com/idogit/tidydataProject/blob/master/CodeBook.md) about the produced tidy data set in the tidyset.txt file
