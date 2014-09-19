@@ -23,6 +23,7 @@ folder <- '.'
 Then all required steps have been performed in order
 
 ###### Step 1: Merges the training and the test sets to create one data set
+
 train/subject_train.txt, train/y_train.txt, train/X_train.txt are read in respective variables which are then cbind to merge columns in the same order
 
 The same process/operations are repeated for test/*_test.txt file
@@ -30,14 +31,20 @@ The same process/operations are repeated for test/*_test.txt file
 The 2 "cbinded"" variables obtained from train and subject files are then rbind to combine/merge the rows to obtain a merged set
 
 ###### Step 2: Extracts only the measurements on the mean and standard deviation for each measurement. 
-The features.txt file is read and the relevant feature indexes are searched using a regular expression: "-(mean|std)\(\)" . The found indexes of relevant features are used to subset the columns of the merged set from Step 1
+
+The features.txt file is read and the relevant feature indexes are searched using a regular expression to match "-mean()" and "-std()".
+
+The found indexes of relevant features are used to subset the columns of the merged set from Step 1
 > Note: Angle features in the original dataset, while a difference with a mean and standard deviation, were not considered a mean or a standard deviation to be selected as a variable per coursera instructions since they are a angle(~difference) and not a mean or sd per se.
 
 ###### Step 3: Uses descriptive activity names to name the activities in the data set
+
 The activity_labels.txt is read to get the labels.
 
 The activity column value are then replace with the labels obtained form the previous file
+
 ###### Step 4: Appropriately labels the data set with descriptive variable names
+
 At step 2, features variable is created with all feature labels and featureColumns variable with the relevant selected columns index, hence the relevant feature labels are directly obtained from those 2 variables and the column directly named
 '''r
 colnames(sets) <- c("subject","activity",features[featuresColumns,2])
@@ -45,6 +52,7 @@ colnames(sets) <- c("subject","activity",features[featuresColumns,2])
 > Why is it descriptive ? The same label of the feature as found in the 'features.txt' file of original dataset ,is deem descriptive with the belief/hope to make it easier to cross reference the original dataset and specificaly the 'features_info.txt' file that describe the original feature selection
 
 ###### Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+
 Use dplyr package to create a data table, which is group by subject and activity and summarize_each remaining columns with mean.
 
 A tidyset.txt file is created with write.table:
