@@ -13,18 +13,25 @@ Refer to the [Codebook](https://github.com/idogit/tidydataProject/blob/master/Co
 
 While The run_analysis.R has been commented, hereby is a description of it as required by Coursera instructions
 
-The UCI HAR Dataset is considered to be in the current working directory (per coursera instructions) in the UCI HAR Dataset (as the default unzip folder). Then all required steps have been performed in order
+The UCI HAR Dataset is considered to be in the current working directory (per coursera instructions) in the UCI HAR Dataset (as the default unzip folder).
+>This repository exposed a download_data.R script that will download and unzip the data in the current working directory, resulting in a UCI HAR Dataset folder
+Adjust the folder variable at the top of the run_analysis.R script if the data is not in this default UCI HAR Dataset repository. For example if all the data are in the current working directory, you can update the script as:
+```r
+folder <- '.'
+```
 
-* Step 1: Merges the training and the test sets to create one data set
-  **step 1
-* Step 2: Extracts only the measurements on the mean and standard deviation for each measurement. 
-  **step 2
-* Step 3: Uses descriptive activity names to name the activities in the data set
-  **step 3
-* Step 4: Appropriately labels the data set with descriptive variable names
-  **step 4
-* Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
-  **step 5
+Then all required steps have been performed in order
+
+###### Step 1: Merges the training and the test sets to create one data set
+
+###### Step 2: Extracts only the measurements on the mean and standard deviation for each measurement. 
+
+###### Step 3: Uses descriptive activity names to name the activities in the data set
+
+###### Step 4: Appropriately labels the data set with descriptive variable names
+
+###### Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+
 
 As suggested by David Hood, Community TA for the course, in the following [thread](https://class.coursera.org/getdata-007/forum/thread?thread_id=49): you can use the following R code to load and view the tidyset.txt file produced by the script:
 ```r
