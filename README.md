@@ -25,27 +25,42 @@ Then all required steps have been performed in order
 ###### Step 1: Merges the training and the test sets to create one data set
 
 train/subject_train.txt, train/y_train.txt, train/X_train.txt are read in respective variables which are then cbind to merge columns in the same order
-
+```r
+train_set <- cbind(train_subject,train_activity,train_feature)
+```
 The same process/operations are repeated for test/*_test.txt file
-
+```r
+test_set <- cbind(test_subject,test_activity,test_feature)
+```
 The 2 "cbinded"" variables obtained from train and subject files are then rbind to combine/merge the rows to obtain a merged set
-
+```r
+sets <- rbind(train_set,test_set)
+```
 ###### Step 2: Extracts only the measurements on the mean and standard deviation for each measurement. 
 
 The features.txt file is read and the relevant feature indexes are searched using a regular expression to match "-mean()" and "-std()".
-
-The found indexes of relevant features are used to subset the columns of the merged set from Step 1
+```r
+featuresColumns <- grep("-(mean|std)\\(\\)",features[,2])
+```
 > Note: Angle features in the original dataset, while a difference with a mean and standard deviation, were not considered a mean or a standard deviation to be selected as a variable per coursera instructions since they are a angle(~difference) and not a mean or sd per se.
+
+The found indexes of relevant features are used to subset the columns of the merged set from Step 1 
+```r
+sets <- sets[,c(1,2,featuresColumns+2)]
+```
+> Mind the "featuresColumns+2": columns are in this order: 1-subject,2-activity,3-feature(1),4-feature(2)...i+2-feature(i)... while featureColumns vector is [feature(1)...feature(66)]
 
 ###### Step 3: Uses descriptive activity names to name the activities in the data set
 
 The activity_labels.txt is read to get the labels.
 
-The activity column values are then replaced with the labels obtained form the previous file
-
+The activity column values (2nd column) are then replaced with the labels (2nd column also of the activities dataframe) 
+```r
+sets[,2] = activities[sets[,2],2]
+```
 ###### Step 4: Appropriately labels the data set with descriptive variable names
 
-At step 2, a "features" dataframe variable has been created to hold all feature labels and a "featureColumns" vector variable with the relevant selected columns index, hence the relevant feature labels are directly obtained from those 2 variables and the column are directly named with descriptive label:
+At step 2, a "features" dataframe variable has been created to hold all feature labels and a "featureColumns" vector variable with the relevant selected columns index, hence the relevant feature labels are directly obtained from those 2 variables and the column are directly named with descriptive labels:
 ```r
 colnames(sets) <- c("subject","activity",features[featuresColumns,2])
 ```
