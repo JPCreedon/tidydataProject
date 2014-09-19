@@ -54,7 +54,7 @@ sets <- sets[,c(1,2,featuresColumns+2)]
 
 The activity_labels.txt is read to get the labels.
 
-The activity column values (2nd column) are then replaced with the labels (2nd column also of the activities dataframe) 
+The activity column values (2nd column: sets[,2]) are then replaced with the labels (2nd column also of the activities dataframe:activities[...,2]) 
 ```r
 sets[,2] = activities[sets[,2],2]
 ```
