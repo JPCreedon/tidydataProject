@@ -64,7 +64,8 @@ At step 2, a "features" dataframe variable has been created to hold all feature 
 ```r
 colnames(sets) <- c("subject","activity",features[featuresColumns,2])
 ```
-> Why is it descriptive to use the feature label as-is? The same label of the feature as found in the 'features.txt' file of original dataset ,is deem to be descriptive with the belief/hope to make it easier to cross reference the original dataset and specificaly the 'features_info.txt' file that describe the original feature selection
+Why is it descriptive to use the feature label as-is and not do some string manipulation (despite being fun ;-) ) ?
+> The same label of the feature as found in the 'features.txt' file of original dataset ,is deem to be descriptive with the belief/hope to make it easier to cross reference the original dataset and specificaly the 'features_info.txt' file that describe the original feature selection
 
 ###### Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 
