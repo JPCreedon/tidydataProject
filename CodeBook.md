@@ -18,7 +18,7 @@ For convenience and readability , hereby a relevant citation from the original a
 > The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain
 >Features are normalized and bounded within [-1,1]
 
-#### Processed data: 
+#### Processed data:
 All data are unitless since features have been normalized in the original raw data
 
 * Subjects have been converted to a factor ("1"-to-"30"")
@@ -29,6 +29,7 @@ All data are unitless since features have been normalized in the original raw da
 
 > Note: Angle features in the original dataset, while a difference with a mean and standard deviation, were not considered a mean or a standard deviation to be selected as a variable per coursera instructions since they are a angle(~difference) and not a mean or sd per se.
 
+*Dimensions: 180 rows (6 subjects * 30 activities) with 68 variables (66 selected mean and sd features, plus subject and activity variables)
 
 | Variable | Details
 | -------- |---------
