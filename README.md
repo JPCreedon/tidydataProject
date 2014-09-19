@@ -46,9 +46,9 @@ The activity column values are then replaced with the labels obtained form the p
 ###### Step 4: Appropriately labels the data set with descriptive variable names
 
 At step 2, a "features" dataframe variable has been created to hold all feature labels and a "featureColumns" vector variable with the relevant selected columns index, hence the relevant feature labels are directly obtained from those 2 variables and the column are directly named with descriptive label:
-'''r
+```r
 colnames(sets) <- c("subject","activity",features[featuresColumns,2])
-'''
+```
 > Why is it descriptive to use the feature label as-is? The same label of the feature as found in the 'features.txt' file of original dataset ,is deem to be descriptive with the belief/hope to make it easier to cross reference the original dataset and specificaly the 'features_info.txt' file that describe the original feature selection
 
 ###### Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
